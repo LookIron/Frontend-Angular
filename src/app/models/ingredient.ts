@@ -1,14 +1,14 @@
 export class Ingredient{
-    id: number;
-    nombre:string;
-    descripcion:string;
-    unidadMedida: string;
+    id: string;
+    name: string;
+    description: string;
+    measure_id: string;
 
-    constructor(id:number, nombre: string, descripcion: string, unidadMedida: string){
+    constructor(id: string, name: string, description: string, measure_id: string){
         this.id = id;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.unidadMedida = unidadMedida;
+        this.name = name;
+        this.description = description;
+        this.measure_id = measure_id;
     }
 
 }

@@ -17,7 +17,7 @@
                 <!-- search form (Optional) -->
                 <form action="#" method="get" class="sidebar-form">
                     <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Buscar tu Hotel por nombre o por ciudad..."/>
+                        <input type="text" name="q" class="form-control" placeholder="Buscar tus recetas por nombre o ingrediente..."/>
                         <span class="input-group-btn">
                             <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>
                             </button>
@@ -30,6 +30,21 @@
 
 
         </div>
+
     </div>
     <!-- /.row -->
+    <div class="row">
+        <div *ngFor="let recipe of recipes">
+            <div class="col-sm-6">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ recipe.name }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ recipe.description }}</h6>
+                        <p class="card-text"> {{ recipe.steps }} </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>

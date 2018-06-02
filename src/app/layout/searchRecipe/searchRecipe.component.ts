@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
+import {Recipe} from '../../models/recipe';
+import {RecipeService} from '../../services/recipe.service';
 
 @Component({
     selector: 'app-searchrecipes',
@@ -8,7 +10,15 @@ import { routerTransition } from '../../router.animations';
     animations: [routerTransition()]
 })
 export class SearchRecipeComponent implements OnInit {
-    constructor() {}
+    recipes: Recipe[];
+    recipe: Recipe;
+    constructor(public recipeService: RecipeService) {
+        this.recipe = {'id': '', 'name': '', 'description': '', 'steps': ''};
+        this.recipeService.getRecipes().subscribe((recipes) => {
+            this.recipes = recipes.data;
+            console.log(this.recipes);
+        });
+    }
 
     ngOnInit() {}
 }

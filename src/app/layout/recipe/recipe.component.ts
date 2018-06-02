@@ -19,7 +19,7 @@ export class RecipeComponent implements OnInit {
     stepsRecipe: string;
 
     constructor(public recipeService: RecipeService) {
-        this.recipe = {'id': '', 'name': '', 'description': '', 'preparation': ''};
+        this.recipe = {'id': '', 'name': '', 'description': '', 'steps': ''};
         this.recipeService.getRecipes().subscribe((recipes) => {
             this.recipes = recipes.data;
             console.log(this.recipes);

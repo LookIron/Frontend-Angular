@@ -1,12 +1,12 @@
 export class Comment{
-    descripcion:string;
-    idUsuario: string;
-    idReceta: string;
+    description: string;
+    user_id: string;
+    recipe_id: string;
 
-    constructor(descripcion: string, idUsuario: string, idReceta: string){
-        this.descripcion = descripcion;
-        this.idUsuario = idUsuario;
-        this.idReceta = idReceta;
+    constructor(description: string, user_id: string, recipe_id: string){
+        this.description = description;
+        this.user_id = user_id;
+        this.recipe_id = recipe_id;
     }
 
 }

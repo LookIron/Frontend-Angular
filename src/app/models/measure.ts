@@ -1,12 +1,12 @@
-export class Measure{
+export class Measure {
     id: string;
-    descripcion:string;
-    cantidad: string;
+    description: string;
+    number: string;
 
-    constructor(id: string,descripcion: string, cantidad: string){
+    constructor(id: string, description: string, number: string) {
         this.id = id;
-        this.descripcion = descripcion;
-        this.cantidad = cantidad;
+        this.description = description;
+        this.number = number;
     }
 
 }
